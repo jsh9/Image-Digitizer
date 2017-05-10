@@ -16,6 +16,8 @@ This GUI app's features are a subset of another free app called [Engauge Digitiz
 
 2. Open MATLAB, and in the command window, type `ImgDigitizer`, then Enter.
 
+*(Click [here](https://github.com/jsh9/Image-Digitizer/releases) to download the binary executable, if you do not have MATLAB, or you prefer to run a packaged executable file.)*
+
 3. This window pops out:  
 ![](https://github.com/jsh9/Image-Digitizer-in-MATLAB/blob/master/screenshots/screenshot1_startup.png?raw=true)
 
