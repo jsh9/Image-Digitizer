@@ -10,7 +10,7 @@ To run without MATLAB: Windows or Mac.
 
 ### Features and limitations
 
-This GUI app's features are a subset of another free app called [Engauge Digitizer](http://markummitchell.github.io/engauge-digitizer/). But this GUI app is faster to oparate (fewer mouse clicks) if you only want to do the simplest thing: extract points from a 2D X-Y graph.
+The features of this GUI app are a subset of another free app called [Engauge Digitizer](http://markummitchell.github.io/engauge-digitizer/). But this GUI app is faster to oparate (fewer mouse clicks) if you only want to do the simplest thing: extract points from a 2D X-Y graph.
 
 ### Very brief tutorial in 8 steps
 
@@ -18,7 +18,7 @@ This GUI app's features are a subset of another free app called [Engauge Digitiz
 
 2. Open MATLAB, and in the command window, type `ImgDigitizer`, then Enter.
 
-*(Click [here](https://github.com/jsh9/Image-Digitizer/releases) to download the binary executable, if you do not have MATLAB, or you prefer to run a packaged executable file.)*
+*(Click [here](https://github.com/jsh9/Image-Digitizer/releases) to download the binary executable if you do not have MATLAB, or you prefer to run a compiled executable file.)*
 
 3. This window pops out:  
 ![](https://github.com/jsh9/Image-Digitizer-in-MATLAB/blob/master/screenshots/screenshot1_startup.png?raw=true)
