@@ -4,7 +4,7 @@
 
 ### System requirements
 
-To run from MATLAB: any operating system with MATLAB (version R2014a or newer) installed can run this app. It also works on the remote end of a Unix server that has a MATLAB, if you access the server through SSH and have X11 enabled.
+To run from MATLAB: any operating system with MATLAB (version R2014a or newer) installed can run this app. It also works on the remote end of a Linux server that has MATLAB installed (you need to have X11 enabled when you access the server).
 
 To run without MATLAB: Windows or Mac.
 
