@@ -14,7 +14,7 @@ The features of this GUI app are a subset of another free app called [Engauge Di
 
 ### Very brief tutorial in 8 steps
 
-1. Put `ImgDigitizer.p` and `ImgDigitizer.fig` into the MATLAB home directory (usually `C:\Users\{username}\Documents\MATLAB` or `$home/Documents/MATLAB`) or an eligible MATLAB search path.
+1. Put `ImgDigitizer.m` and `ImgDigitizer.fig` into the MATLAB home directory (usually `C:\Users\{username}\Documents\MATLAB` or `$home/Documents/MATLAB`) or an eligible MATLAB search path.
 
 2. Open MATLAB, and in the command window, type `ImgDigitizer`, then Enter.
 
