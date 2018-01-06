@@ -22,7 +22,7 @@ function varargout = ImgDigitizer(varargin)
 
 % Edit the above text to modify the response to help ImgDigitizer
 
-% Last Modified by GUIDE v2.5 03-Dec-2014 03:46:01
+% Last Modified by GUIDE v2.5 05-Jan-2018 18:52:03
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -175,9 +175,9 @@ function uipanel2_y_scale_SelectionChangeFcn(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 switch get(eventdata.NewValue,'Tag') % Get Tag of selected object.
-    case 'radiobutton1'
+    case 'radiobutton3'
         y_scale = 'linear';
-    case 'radiobutton2'
+    case 'radiobutton4'
         y_scale = 'log';
 end
 handles.metricdata.y_scale = y_scale;
@@ -354,6 +354,30 @@ handles.metricdata.step5_finished = 0;
 guidata(hObject,handles);
 
 
+% --- Executes during object creation, after setting all properties.
+function checkbox1_reverse_Y_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to checkbox1_reverse_Y (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+handles.metricdata.reversed_Y = 0;
+
+guidata(hObject, handles);
+
+
+% --- Executes on button press in checkbox1_reverse_Y.
+function checkbox1_reverse_Y_Callback(hObject, eventdata, handles)
+% hObject    handle to checkbox1_reverse_Y (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of checkbox1_reverse_Y
+
+handles.metricdata.reversed_Y = get(hObject,'Value');
+
+guidata(hObject, handles);
+
+
 % --- Executes on button press in pushbutton6_Start.
 function pushbutton6_Start_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton6_Start (see GCBO)
@@ -409,6 +433,17 @@ else
                 y_ = y1 + (y - y1c)/(y2c - y1c)*(y2 - y1);
             end
         end
+        
+        if handles.metricdata.reversed_Y
+            if strcmp(y_scale,'linear')
+                y_ = y1 + y2 - y_;
+            elseif strcmp(y_scale,'log')
+                y_power_ = log10(y_);
+                rev_y_power_ = log10(y1) + log10(y2) - y_power_;
+                y_ = 10.^(rev_y_power_);
+            end
+        end
+        
         data = [x_,y_];
         handles.metricdata.data = data;
         disp('Digitized data (x,y):')
@@ -417,6 +452,9 @@ else
         figure;
         plot(x_,y_,'b-o');
         set(gca,'xScale',x_scale,'yScale',y_scale);
+        if handles.metricdata.reversed_Y
+            set(gca,'Ydir','reverse');
+        end
         xlim([x1 x2]);
         ylim([y1 y2]);
         grid on;
@@ -491,3 +529,4 @@ set(chm,'FontName','Arial');
 pos = get(hm,'position');
 pos = pos + [0,0,42,10];
 set(hm,'position',pos);
+
