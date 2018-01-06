@@ -22,7 +22,7 @@ function varargout = ImgDigitizer(varargin)
 
 % Edit the above text to modify the response to help ImgDigitizer
 
-% Last Modified by GUIDE v2.5 05-Jan-2018 00:46:17
+% Last Modified by GUIDE v2.5 05-Jan-2018 18:52:03
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -354,6 +354,17 @@ handles.metricdata.step5_finished = 0;
 guidata(hObject,handles);
 
 
+% --- Executes during object creation, after setting all properties.
+function checkbox1_reverse_Y_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to checkbox1_reverse_Y (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+handles.metricdata.reversed_Y = 0;
+
+guidata(hObject, handles);
+
+
 % --- Executes on button press in checkbox1_reverse_Y.
 function checkbox1_reverse_Y_Callback(hObject, eventdata, handles)
 % hObject    handle to checkbox1_reverse_Y (see GCBO)
@@ -518,5 +529,4 @@ set(chm,'FontName','Arial');
 pos = get(hm,'position');
 pos = pos + [0,0,42,10];
 set(hm,'position',pos);
-
 
