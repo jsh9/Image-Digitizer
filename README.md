@@ -14,9 +14,9 @@ The features of this GUI app are a subset of another free app called [Engauge Di
 
 ### Very brief tutorial in 8 steps
 
-1. Clone this repository; then unzip.
+1. Download the whole repository, unzip it as a folder.
 
-2. Open MATLAB, and then run `ImgDigitizer.m` from MATLAB.
+2. From the folder, run `ImgDigitizer.m` from MATLAB. Or `ImgDigitizer4k.m` if you are using a 4k monitor or higher. (Alternatively, you can add the folder into as an eligible MATLAB search path [[what's a search path](https://www.mathworks.com/help/matlab/search-path.html)], and then type `ImgDigitizer` or `ImgDigitizer4k` directly from MATLAB's command window.)
 
 *(Click [here](https://github.com/jsh9/Image-Digitizer/releases) to download the binary executable if you do not have MATLAB, or you prefer to run a compiled executable file.)*
 
@@ -39,4 +39,4 @@ The features of this GUI app are a subset of another free app called [Engauge Di
 ![](https://github.com/jsh9/Image-Digitizer-in-MATLAB/blob/master/screenshots/screenshot6_csv_contents.png?raw=true)
 
 ### License
-Copyright (c) 2014-2017, Jian Shi. See LICENSE.txt file for details.
+Copyright (c) 2014-2019, Jian Shi. See LICENSE.txt file for details.
